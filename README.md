@@ -1,6 +1,8 @@
 # Etch-a-Sketch
 
-[The Odin Project's Etch-a-Sketch Project.](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)
+[The Odin Project's Etch-a-Sketch project.](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)
+
+[Live](https://shonebinu.github.io/Etch-a-Sketch/)
 
 
 ### To-do's

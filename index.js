@@ -1,5 +1,6 @@
 
-let grid_size = 100;
+
+let grid_size = 16;
 
 const container = document.querySelector('#grid-container');
 
@@ -19,6 +20,22 @@ const putSquare = (grid_size) => {
 
 putSquare(grid_size);
 
+
+
+const button = document.querySelector('#grid');
+
+button.addEventListener('click', () => {
+
+    let newGridSize = prompt('How many squares do you want in one side? Enter a number below 100.');
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    };
+    if (newGridSize > 100) newGridSize = 100;
+    putSquare(newGridSize);
+
+});
+
+
 const tinySquare = document.querySelectorAll('.tinySquare');
 
 
@@ -27,7 +44,3 @@ tinySquare.forEach(tiny => {
         tiny.style.backgroundColor = `#cf6679`;
     });
 });
-
-const button = document.querySelector('#grid');
-
-

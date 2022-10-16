@@ -33,8 +33,13 @@ button.addEventListener('click', () => {
     if (newGridSize > 100) newGridSize = 100;
     putSquare(newGridSize);
 
+
+    findSquare();
+
 });
 
+
+function findSquare() {
 
 const tinySquare = document.querySelectorAll('.tinySquare');
 
@@ -44,3 +49,7 @@ tinySquare.forEach(tiny => {
         tiny.style.backgroundColor = `#cf6679`;
     });
 });
+
+};
+
+findSquare();

@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-color: #212529;
+    background-color: #100F0F;
     font-family: "Ubuntu";
     color: #DEE2E6;
     display: flex;
@@ -52,8 +52,10 @@ a:hover {
 #grid-container {
     width: 70vh;
     height: 70vh;
-    border: 3px double #bb86fc;
+    border: 3px double turquoise;
 
     display: flex;
     flex-direction: column;
 }
+
+

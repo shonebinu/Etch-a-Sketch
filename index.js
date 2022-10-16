@@ -19,8 +19,9 @@ const putSquare = (grid_size) => {
 };
 
 const tinySquare = document.querySelectorAll('.tinySquare');
+
 tinySquare.forEach(square => {
-    
+    square.addEventListener
 });
 
 

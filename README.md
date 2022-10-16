@@ -1,5 +1,9 @@
 # Etch-a-Sketch
 
+
+
+### To-do's set by [The Odin Project](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)
+
 - [x] 16*16 square grid using Javascript
 - [ ] Hover effect so that the divs change color when mouse passed over them
 - [ ] Button on the top of the screen that will send the user a popup asking for the number of squares per side for the new grid. Once entered the existing grid should be removed and a new grid should be generated in the same total space as before. (SET A MAX LIMIT AT 100) - {Button, Prompt}

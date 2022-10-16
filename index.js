@@ -1,6 +1,13 @@
 
+function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    let randomColor = 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+return randomColor;
+}
 
-let grid_size = 16;
+
+
+let grid_size = 64;
 
 const container = document.querySelector('#grid-container');
 
@@ -25,8 +32,9 @@ const tinySquare = document.querySelectorAll('.tinySquare');
 
 tinySquare.forEach(tiny => {
     tiny.addEventListener('mouseover', () => {
-        tiny.style.backgroundColor = `#cf6679`;
+        tiny.style.backgroundColor = `${random_rgba()}`;
     });
+
 });
 
 };
@@ -62,3 +70,7 @@ const liveGrid = (size) => {
 };
 
 liveGrid(grid_size);
+
+
+
+

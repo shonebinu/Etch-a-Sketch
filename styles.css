@@ -59,3 +59,10 @@ a:hover {
 }
 
 
+#liveGridSize {
+    position: absolute;
+    right: 30vh;
+    top: 30vh;
+    font-weight: bold;
+    font-size: 5vh;
+}

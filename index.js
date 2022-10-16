@@ -18,27 +18,6 @@ const putSquare = (grid_size) => {
     };
 };
 
-putSquare(grid_size);
-
-
-
-const button = document.querySelector('#grid');
-
-button.addEventListener('click', () => {
-
-    let newGridSize = prompt('How many squares do you want in one side? Enter a number below 100.');
-    while (container.firstChild) {
-        container.removeChild(container.firstChild);
-    };
-    if (newGridSize > 100) newGridSize = 100;
-    putSquare(newGridSize);
-
-
-    findSquare();
-
-});
-
-
 function findSquare() {
 
 const tinySquare = document.querySelectorAll('.tinySquare');
@@ -52,4 +31,32 @@ tinySquare.forEach(tiny => {
 
 };
 
+putSquare(grid_size);
 findSquare();
+
+
+const button = document.querySelector('#grid');
+
+button.addEventListener('click', () => {
+
+    let newGridSize = prompt('How many squares do you want in one side of the box? Enter a number below 100.');
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    };
+    if (newGridSize > 100) newGridSize = 100;
+    putSquare(newGridSize);
+
+
+    findSquare();
+
+});
+
+const liveGrid = (size) => {
+
+
+    const liveGridSize = document.querySelector('#liveGridSize');
+    liveGridSize.textContent = `${size} × ${size}`;
+
+};
+
+liveGrid(grid_size);

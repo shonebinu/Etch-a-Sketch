@@ -49,6 +49,8 @@ button.addEventListener('click', () => {
 
     findSquare();
 
+    liveGrid(newGridSize);
+
 });
 
 const liveGrid = (size) => {

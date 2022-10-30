@@ -1,5 +1,8 @@
 # Etch-a-Sketch
+
 [Live Demo of Etch-a-Sketch](https://shonebinu.github.io/Etch-a-Sketch/)
+
+![Etch-a-Sketch app's image](https://raw.githubusercontent.com/shonebinu/Etch-a-Sketch/main/Etch-a-Sketchimage.png)
 
 ### Features 
 - Random RGB colors

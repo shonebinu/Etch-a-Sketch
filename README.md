@@ -1,9 +1,9 @@
 # Etch-a-Sketch
+[Live Demo of Etch-a-Sketch](https://shonebinu.github.io/Etch-a-Sketch/)
 
-[The Odin Project's Etch-a-Sketch project.](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)
-
-[Live](https://shonebinu.github.io/Etch-a-Sketch/)
-
+### Features 
+- Random RGB colors
+- Option to select the grid size according to the user's wish
 
 ### To-do's
 

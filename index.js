@@ -1,8 +1,8 @@
 
 function random_rgba() {
     var o = Math.round, r = Math.random, s = 255;
-    let randomColor = 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
-return randomColor;
+    let randomColor = 'rgba(' + o(r() * s) + ',' + o(r() * s) + ',' + o(r() * s) + ',' + r().toFixed(1) + ')';
+    return randomColor;
 }
 
 
@@ -14,11 +14,11 @@ const container = document.querySelector('#grid-container');
 const putSquare = (grid_size) => {
     for (let i = 0; i < grid_size; i++) {
         const newHorizontal = document.createElement('div');
-        newHorizontal.style.cssText = `width: 100%; height: ${70/grid_size}vh; display: flex;`
+        newHorizontal.style.cssText = `width: 100%; height: ${70 / grid_size}vh; display: flex;`
         container.appendChild(newHorizontal);
         for (let j = 0; j < grid_size; j++) {
             const newTinySquare = document.createElement('div');
-            newTinySquare.style.cssText = `height: 100%; width: ${70/grid_size}vh;`
+            newTinySquare.style.cssText = `height: 100%; width: ${70 / grid_size}vh;`
             newTinySquare.classList.add('tinySquare');
             newHorizontal.appendChild(newTinySquare);
         };
@@ -27,15 +27,15 @@ const putSquare = (grid_size) => {
 
 function findSquare() {
 
-const tinySquare = document.querySelectorAll('.tinySquare');
+    const tinySquare = document.querySelectorAll('.tinySquare');
 
 
-tinySquare.forEach(tiny => {
-    tiny.addEventListener('mouseover', () => {
-        tiny.style.backgroundColor = `${random_rgba()}`;
+    tinySquare.forEach(tiny => {
+        tiny.addEventListener('mouseover', () => {
+            tiny.style.backgroundColor = `${random_rgba()}`;
+        });
+
     });
-
-});
 
 };
 
@@ -47,11 +47,11 @@ const button = document.querySelector('#grid');
 
 button.addEventListener('click', () => {
 
-    let newGridSize = prompt('How many squares do you want in one side of the box? Enter a number below 100.');
+    let newGridSize = +prompt('How many squares do you want in one side of the box? Enter a number below 100.');
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     };
-    if (newGridSize > 100) newGridSize = 100;
+    if (newGridSize > 100 || !newGridSize) newGridSize = 100;
     putSquare(newGridSize);
 
 

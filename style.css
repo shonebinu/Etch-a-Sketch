@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Inter;
+}
+
+#grid-container {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  aspect-ratio: 1;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+}
+
+.grid-square {
+  flex: 1;
+  aspect-ratio: 1;
+  border: 1px solid black;
+}
+
+main {
+  display: flex;
+  gap: 10vh;
+}

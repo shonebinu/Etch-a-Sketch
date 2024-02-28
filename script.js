@@ -8,7 +8,6 @@ const gridSizeInput = document.querySelector("#grid-size-input");
 const colorInput = document.querySelector("[type='color']");
 const clearButton = document.querySelector("#clear");
 const eraseButton = document.querySelector("#erase");
-const rainbowButton = document.querySelector("#rainbow");
 
 gridSizeInput.addEventListener("change", () => {
   const gridSize = gridSizeInput.value;
@@ -38,7 +37,9 @@ function drawGrid(gridSize) {
       let square = document.createElement("div"); 
 
       square.addEventListener("mouseover", () => {
-        square.style.backgroundColor = squareColor;
+        square.style.backgroundColor = document.querySelector("#rainbow").checked 
+          ? generateRandomColor() 
+          : squareColor;
       });
 
       square.classList.add("grid-square");
@@ -55,4 +56,15 @@ function clearGrid() {
       square.style.backgroundColor = "";
     });
   });
+}
+
+function generateRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+
+  return color;
 }

@@ -5,7 +5,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: Inter;
+  font-family: "Nanum Pen Script";
+  font-size: 1.5rem;
 }
 
 #grid-container {
@@ -14,6 +15,7 @@ body {
   height: 80vh;
   aspect-ratio: 1;
   margin: 0;
+  border: 1px solid black;
 }
 
 .row {
@@ -23,10 +25,19 @@ body {
 .grid-square {
   flex: 1;
   aspect-ratio: 1;
-  border: 1px solid black;
 }
 
 main {
   display: flex;
   gap: 10vh;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }

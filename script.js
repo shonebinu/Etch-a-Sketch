@@ -1,13 +1,12 @@
 "use strict"
 
-window.onload = drawGrid(16);
-
 let squareColor = "black";
 
 const gridSizeInput = document.querySelector("#grid-size-input");
 const colorInput = document.querySelector("[type='color']");
 const clearButton = document.querySelector("#clear");
-const eraseButton = document.querySelector("#erase");
+
+window.onload = drawGrid(16);
 
 gridSizeInput.addEventListener("change", () => {
   const gridSize = gridSizeInput.value;
@@ -28,6 +27,8 @@ clearButton.addEventListener("click", () => {
 function drawGrid(gridSize) {
   const gridContainer = document.querySelector("#grid-container");
   gridContainer.innerHTML = "";
+
+  gridSizeInput.value = gridSize;
   
   for (let i = 0; i < gridSize; i++) {
     let rowGrid = document.createElement("div");
